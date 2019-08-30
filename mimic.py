@@ -85,8 +85,8 @@ def main():
         print('usage: python mimic.py file-to-read')
         sys.exit(1)
 
-    dict = mimic_dict(sys.argv[1])
-    print_mimic(dict, '')
+    d = mimic_dict(sys.argv[1])
+    print_mimic(d, '')
 
 
 if __name__ == '__main__':
