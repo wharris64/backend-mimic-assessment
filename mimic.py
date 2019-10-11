@@ -54,8 +54,8 @@ def mimic_dict(filename):
     f = open(filename, 'r')
     text = f.read()
     f.close()
-    prev = ''
     words = text.split()
+    prev = ''
     for word in words:
         if not prev in mimic_dict:
             mimic_dict[prev] = [word]
@@ -70,13 +70,13 @@ def mimic_dict(filename):
 
 
 def print_mimic(mimic_dict, word):
-    
-    print (word),
-    nexts = mimic_dict.get(word)          # Returns None if not found
-    if not nexts:
-      nexts = mimic_dict['']  # Fallback to '' if not found
-    word = random.choice(nexts)
-    #raise NotImplementedError("Get to Work!")
+    for unused_i in range(200):
+        print(word)
+        nexts = mimic_dict.get(word)
+        if not nexts:
+            nexts = mimic_dict[''] 
+        word = random.choice(nexts)
+    raise NotImplementedError("Get to workin!")
 
 
 # Provided main(), calls mimic_dict() and mimic()
